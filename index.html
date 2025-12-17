@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Prime Video</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            background-color: #00050D;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: rgba(26, 26, 28, 0.9);
+            padding: 15px 25px;
+            display: flex;
+            position: fixed;
+            width: 90%;
+            border-bottom-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+            font-family: sans-serif;
+            align-items: center;
+            margin-left: 50px;
+            top: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .image img {
+            width: 90%;
+            cursor: pointer;
+        }
+
+        .image {
+            width: 10%;
+            margin-right: 30px;
+        }
+
+        .sections-left {
+            display: flex;
+            width: 65%;
+            gap: 30px;
+            font-size: 1rem;
+            margin-right: 180px;
+        }
+
+
+        .sections-left a:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            color: #00050d;
+            padding: 8px;
+        }
+
+        .sub1 a {
+            margin: 0 20px 0 20px;
+
+        }
+
+        .sub2 {
+            border-left: 3px solid #4b4e52;
+            padding-left: 20px;
+        }
+
+        .sections-right {
+            display: flex;
+            gap: 20px;
+            width: 40%;
+            margin-left: 100px;
+            color: white;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .sections-right a {
+            color: white;
+        }
+
+        .sections-right button {
+            padding: 13px 20px;
+            border-radius: 10px;
+            background-color: #338bd5;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            margin-left: px;
+            cursor: pointer;
+        }
+
+        .sections-right button:hover {
+            box-shadow: 0 0 15px #00f6ff;
+        }
+
+        .sections-right select {
+            border: none;
+            background-color: inherit;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+
+        }
+
+
+        .sections-right a>i:hover {
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 10px;
+        }
+
+        .sections-right select:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .hero-section {
+            min-width: 100vw;
+            color: white;
+            background-image: url("https://m.media-amazon.com/images/G/31/AmazonVideo/2019/MLP.jpg");
+            background-size: cover; 
+    
+            
+        }
+
+        .side {
+             background: black;
+            width: 51%;
+            height: 100vh;
+            box-shadow: 1px 2px 3px rgb(0, 0, 0,0.5);
+
+        }
+    
+
+
+        .side h1 {
+            font-size: 3.2rem;
+            font-family: sans-serif;
+            padding-top: 30px;
+            margin-left: 70px;
+            margin-top: 100px;
+        }
+
+        .side p {
+            font-size: 1.7rem;
+            font-family: sans-serif;
+            margin-left: 70px;
+        }
+
+        .plans {
+            background-color: white;
+            border-radius: 10px;
+            margin-left: 70px;
+            width: 400px;
+            text-align: center;
+            padding: 3px 5px;
+            margin: 20px;
+            margin-left: 70px;
+            transition: transform 0.3s ease;
+
+        }
+
+        .plans h3 {
+            color: black;
+            font-family: sans-serif;
+        }
+
+        .plans-1 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+
+        }
+
+        .side p {
+            font-size: 1rem;
+            font-family: sans-serif;
+            margin-left: 200px;
+        }
+
+        .plans:hover {
+            transform: scale(1.02);
+        }
+
+        #para {
+            margin-left: 70px;
+        }
+
+        .hero-section-1 {
+            display: flex;
+            color: white;
+            background-repeat: no-repeat;
+            width: 100%;
+            gap: 0;
+            border-left: 5px solid rgba(26, 26, 28, 0.8);
+            margin-top: 35px;
+        }
+
+        .side-img {
+            flex: 1;
+            height: 100vh;
+        }
+
+
+        .side-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+         .w {
+            background-color: #000000;
+            flex: 1;
+            height: 100vh;
+            width: 63vw;
+            padding-right: 15px;
+            padding-left: 30px;
+            
+        }
+
+       
+
+
+
+        .hero-section-3 {
+            color: white;
+            display: flex;
+            width: 90%;
+            margin-top: 30px;
+            margin: auto;
+            gap: 30px;
+            padding: 50px;
+            padding-bottom: 80px;
+        }
+
+        .card-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 50%;
+            gap: 9px;
+
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .card img:hover {
+            box-shadow: 0 0 10px #edf4f4;
+        }
+
+        .text {
+            width: 50%;
+            font-family: sans-serif;
+        }
+
+        .text h1 {
+            font-size: 3rem;
+            margin-top: 0;
+
+        }
+
+        .text p {
+            font-size: 1.3rem;
+        }
+
+        footer {
+            background-color: #222222;
+            font-family: sans-serif;
+        }
+
+        footer img {
+            width: 8%;
+            margin-left: 550px;
+            margin-top: 20px;
+            cursor: auto;
+
+        }
+
+        .img {
+            width: 90%;
+            margin-left: 140px;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #3084e6;
+            font-size: 1rem;
+
+        }
+
+        footer p {
+            color: #819787;
+            text-align: center;
+            padding-bottom: 15px;
+            cursor: text;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="image">
+            <img src="https://m.media-amazon.com/images/G/01/digital/video/web/logo-min-remaster.png" alt="">
+        </div>
+        <div class="sections-left">
+            <div class="sub1">
+                <a href="">Home</a>
+                <a href="">Movies</a>
+                <a href="">TV Shows</a>
+                <a href="">Live TV</a>
+            </div>
+
+            <div class="sub2">
+                <a href="">
+                    <i class="fa-solid fa-border-all"></i>
+                    Subscriptions</a>
+            </div>
+        </div>
+        <div class="sections-right">
+            <a href="">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <select name="" id="">
+                <option value="">EN</option>
+            </select>
+            <a href="">
+                <i class="fa-solid fa-grip-vertical"></i>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <button type="submit">
+                Join Prime
+            </button>
+        </div>
+
+
+    </nav>
+    <div class="hero-section">
+        <div class="side">
+            <h1>
+                Welcome to Prime Video
+            </h1>
+            <p id="para">
+                Watch the latest movies, TV shows, and award-winning Amazon Originals
+            </p>
+            <div class="plans-1 plans">
+                <h3>Join Prime Lite at 799/year</h3>
+
+            </div>
+            <p>Effectively ₹67/month</p>
+            <div class="plans-1 plans">
+                <h3>Join Prime Annual at 1499/year</h3>
+
+            </div>
+            <p>Effectively ₹125/month</p>
+            <div class="plans">
+                <h3>Join Prime Monthly at 299/year</h3>
+            </div>
+            <div class="plans">
+                <h3>Compare all plans</h3>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="hero-section-1">
+        <div class="side w">
+            <h1>
+                Movie rentals on Prime Video
+            </h1>
+            <p id="para">
+                Early Access to new movies, before digital subscription
+            </p>
+            <div class="plans" style="width: 120px;margin-top: 50px;">
+                <h3>Rent now</h3>
+
+            </div>
+
+        </div>
+        <div class="side-img">
+            <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/MLP/TVOD/TVOD_MLP_Right._SX1440_CR575,0,865,675_QL80_AC_FP_.jpg"
+                alt="">
+        </div>
+    </div>
+
+    <div class="hero-section-3">
+        <div class="text">
+            <h1>Your favorite subscriptions all in one place</h1>
+
+            <p>Customers can subscribe to get access to a variety of premium and specialty content, easily accessible
+                within the Prime Video app</p>
+        </div>
+        <div class="card-section">
+            <div class="card">
+                <a href=""><img
+                        src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_AppleTV_V1._AC_SX400_QL80_FP_.png"
+                        alt=""></a>
+            </div>
+            <div class="card">
+                <a href=""><img
+                        src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Crunchyroll_V1._AC_SX400_QL80_FP_.png"
+                        alt=""></a>
+            </div>
+            <div class="card">
+                <a href=""><img
+                        src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_LGP_V1._AC_SX400_QL80_FP_.png"
+                        alt=""></a>
+            </div>
+            <div class="card">
+                <a href=""><img
+                        src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Discovery_V1._AC_SX400_QL80_FP_.png"
+                        alt=""></a>
+            </div>
+            <div class="card">
+                <a href=""><img
+                        src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Anime_V1._AC_SX400_QL80_FP_.png"
+                        alt=""></a>
+            </div>
+            <div class="card">
+                <a href=""><img
+                        src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Manoramamax_V1._AC_SX400_QL80_FP_.png"
+                        alt=""></a>
+            </div>
+            <div class="card">
+                <a href=""><img
+                        src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Chaupal_V1._AC_SX400_QL80_FP_.png"
+                        alt=""></a>
+            </div>
+            <div class="card">
+                <a href=""><img
+                        src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_BBC_V1._AC_SX400_QL80_FP_.png"
+                        alt=""></a>
+            </div>
+            <div class="card">
+                <a href=""><img
+                        src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/Channels/MLP/426x294_Fancode_V1._AC_SX400_QL80_FP_.png"
+                        alt=""></a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="img"><a href=""><img
+                    src="https://m.media-amazon.com/images/G/01/digital/video/acquisition/logo/pv_logo_white._CB548637580_.png"
+                    alt=""></a></div>
+        <div class="links">
+            <a href="">Terms & Policy Notice</a>
+            <a href="">Send us feedback</a>
+            <a href="">Help</a>
+        </div>
+        <p>© 1996-2025, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+</body>
+
+</html>
